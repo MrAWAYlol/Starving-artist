@@ -1,0 +1,166 @@
+```local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/xHeptc/Kavo-UI-Library/main/source.lua"))()
+local Window = Library.CreateLib("Starving Artists - Art Coins Script", "Midnight")
+ 
+local Farm = Window:NewTab("Auto Farm")
+local FarmSection = Farm:NewSection("Art Coins - Auto Farm")
+ 
+local Credits = Window:NewTab("Credits")
+local CreditsSection = Credits:NewSection("Created By MrAWAy")
+ 
+local start = false
+ 
+CreditsSection:NewButton("Copy User URL", "Copy User URL", function()
+ 
+    local copy = "https://discord.gg/jbYqnDtD7d"
+ 
+    setclipboard(tostring(copy))
+ 
+    local message = Instance.new("Sound", workspace)
+ 
+    message.PlaybackSpeed = 1.5
+    message.Volume = 0.3
+    message.SoundId = "rbxassetid://170765130"
+    message.PlayOnRemove = true
+    message:Destroy()
+    game.StarterGui:SetCore("SendNotification", {Title = "AAA USER", Text = "Copied to clipboard successfully", Duration = 5})
+ 
+ 
+end)
+ 
+FarmSection:NewButton("Anti AFK", "Anti AFK", function()
+ 
+    local message = Instance.new("Sound", workspace)
+ 
+    message.PlaybackSpeed = 1.5
+    message.Volume = 0.3
+    message.SoundId = "rbxassetid://170765130"
+    message.PlayOnRemove = true
+    message:Destroy()
+    game.StarterGui:SetCore("SendNotification", {Title = "ANTI AFK", Text = "ANTI AFK ENABLED", Duration = 5})
+ 
+    local vu = game:GetService("VirtualUser")
+ 
+    game:GetService("Players").LocalPlayer.Idled:connect(function()
+        vu:Button2Down(Vector2.new(0,0),workspace.CurrentCamera.CFrame)
+        wait(1)
+        vu:Button2Up(Vector2.new(0,0),workspace.CurrentCamera.CFrame)
+    end)
+ 
+end)
+ 
+FarmSection:NewToggle("Start Auto Farm", "Start Auto Farm", function()
+ 
+    if start then
+        start = false
+    else
+        start = true
+    end
+ 
+    while start do
+ 
+        local pos = Vector3.new(10, 0, 0)
+        local lookAt = Vector3.new(0, 0, 0)
+        local cameraCFrame = CFrame.new(pos, lookAt)
+        workspace.CurrentCamera.CFrame = cameraCFrame
+ 
+        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-202.32763671875, 126.472900390625, -8.158814430236816)
+        wait(0.7)
+        game:GetService("VirtualInputManager"):SendKeyEvent(true, Enum.KeyCode.E, false, game)
+        wait(0.3)
+        game:GetService("VirtualInputManager"):SendKeyEvent(true, Enum.KeyCode.One, false, game)
+ 
+        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-173.59268188476562, 120.8567886352539, -8.15648365020752)
+        wait(0.7)
+        game:GetService("VirtualInputManager"):SendKeyEvent(true, Enum.KeyCode.E, false, game)
+        wait(0.3)
+        game:GetService("VirtualInputManager"):SendKeyEvent(true, Enum.KeyCode.One, false, game)
+ 
+        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-202.32763671875, 126.472900390625, -8.158814430236816)
+        wait(0.7)
+        game:GetService("VirtualInputManager"):SendKeyEvent(true, Enum.KeyCode.E, false, game)
+        wait(0.3)
+        game:GetService("VirtualInputManager"):SendKeyEvent(true, Enum.KeyCode.One, false, game)
+ 
+        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(277.7294006347656, 122.39051818847656, -67.52887725830078)
+        wait(0.5)
+        game:GetService("VirtualInputManager"):SendKeyEvent(true, Enum.KeyCode.E, false, game)
+        wait(0.5)
+ 
+        local pos = Vector3.new(0, 0, 10)
+        local lookAt = Vector3.new(0, 0, 0)
+        local cameraCFrame = CFrame.new(pos, lookAt)
+        workspace.CurrentCamera.CFrame = cameraCFrame
+ 
+        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(305.5359191894531, 120.4101791381836, -92.54749298095703)
+        wait(0.5)
+        game:GetService("VirtualInputManager"):SendKeyEvent(true, Enum.KeyCode.E, false, game)
+        wait(0.5)
+ 
+        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(350.3291320800781, 120.40425872802734, -91.1894760131836)
+        wait(0.5)
+        game:GetService("VirtualInputManager"):SendKeyEvent(true, Enum.KeyCode.E, false, game)
+        wait(0.5)
+ 
+        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(394.72161865234375, 122.40753173828125, -91.95436096191406)
+        wait(0.5)
+        game:GetService("VirtualInputManager"):SendKeyEvent(true, Enum.KeyCode.E, false, game)
+        wait(0.5)
+ 
+        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(433.040771484375, 120.40985107421875, -92.08615112304688)
+        wait(0.5)
+        game:GetService("VirtualInputManager"):SendKeyEvent(true, Enum.KeyCode.E, false, game)
+        wait(0.5)
+ 
+        local pos = Vector3.new(-10, 0, 0)
+        local lookAt = Vector3.new(0, 0, 0)
+        local cameraCFrame = CFrame.new(pos, lookAt)
+        workspace.CurrentCamera.CFrame = cameraCFrame
+ 
+        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(460.147705078125, 120.41004943847656, -64.69949340820312)
+        wait(0.5)
+        game:GetService("VirtualInputManager"):SendKeyEvent(true, Enum.KeyCode.E, false, game)
+        wait(0.5)
+ 
+        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(458.0113220214844, 122.36131286621094, 48.662864685058594)
+        wait(0.5)
+        game:GetService("VirtualInputManager"):SendKeyEvent(true, Enum.KeyCode.E, false, game)
+        wait(0.5)
+ 
+        local pos = Vector3.new(0, 0, -10)
+        local lookAt = Vector3.new(0, 0, 0)
+        local cameraCFrame = CFrame.new(pos, lookAt)
+        workspace.CurrentCamera.CFrame = cameraCFrame
+ 
+        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(435.5454406738281, 120.41023254394531, 70.53404235839844)
+        wait(0.5)
+        game:GetService("VirtualInputManager"):SendKeyEvent(true, Enum.KeyCode.E, false, game)
+        wait(0.5)
+ 
+        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(392.2211608886719, 120.41011810302734, 75.89259338378906)
+        wait(0.5)
+        game:GetService("VirtualInputManager"):SendKeyEvent(true, Enum.KeyCode.E, false, game)
+        wait(0.5)
+ 
+        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(347.3946228027344, 122.30941772460938, 72.68737030029297)
+        wait(0.5)
+        game:GetService("VirtualInputManager"):SendKeyEvent(true, Enum.KeyCode.E, false, game)
+        wait(0.5)
+ 
+        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(304.9431457519531, 120.40972900390625, 75.88269805908203)
+        wait(0.5)
+        game:GetService("VirtualInputManager"):SendKeyEvent(true, Enum.KeyCode.E, false, game)
+        wait(0.5)
+ 
+        local pos = Vector3.new(10, 0, 0)
+        local lookAt = Vector3.new(0, 0, 0)
+        local cameraCFrame = CFrame.new(pos, lookAt)
+        workspace.CurrentCamera.CFrame = cameraCFrame
+ 
+        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(280.74169921875, 120.41021728515625, 44.390953063964844)
+        wait(0.5)
+        game:GetService("VirtualInputManager"):SendKeyEvent(true, Enum.KeyCode.E, false, game)
+        wait(0.5)
+    
+    end
+ 
+end)```
